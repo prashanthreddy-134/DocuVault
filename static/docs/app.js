@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("input[type=file]").forEach(input=>input.addEventListener("change",()=>{const file=input.files[0];if(file){const label=document.createElement("small");label.className="text-success";label.textContent=`Selected: ${file.name} (${(file.size/1024).toFixed(1)} KB)`;input.parentNode.appendChild(label)}}));});
